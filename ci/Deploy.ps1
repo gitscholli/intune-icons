@@ -36,12 +36,13 @@ Else {
             git config --global core.safecrlf false
 
             # Push changes to GitHub
+            $Version = "$(Get-Date -Format yyyy).$(Get-Date -Format MM).$($env:APPVEYOR_BUILD_NUMBER)"
             Invoke-Process -FilePath "git" -ArgumentList "checkout master"
             git add --all
             git status
-            git commit -s -m "AppVeyor validate: $env:APPVEYOR_BUILD_VERSION"
+            git commit -s -m "AppVeyor validate: $Version"
             Invoke-Process -FilePath "git" -ArgumentList "push origin master"
-            Write-Host "$env:APPVEYOR_BUILD_VERSION pushed to GitHub." -ForegroundColor Cyan
+            Write-Host "$Version pushed to GitHub." -ForegroundColor Cyan
         }
         Catch {
             # Sad panda; it broke
