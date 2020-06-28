@@ -3,7 +3,7 @@
 [![License][license-badge]][license]
 [![Build status][appveyor-badge]][appveyor-build]
 
-A set of application icons for Windows, macOS, Android and iOS platforms for use when adding applications to Intune (or other MDM and application deployment solutions).
+A set of application icons for Windows, macOS, Android and iOS platforms for use when adding applications to Microsoft Intune or Microsoft Endpoint Configuration Manager (or other device management / MDM and application deployment solutions).
 
 Applications are displayed in the Intune Company Portal app or at [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/) for end-user self-service install. Using high quality product icons ensures users see a familiar interface when accessing these applications.
 
